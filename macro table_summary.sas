@@ -467,10 +467,10 @@ title "Descriptive Table by Variable &byvar_old.";
 
 proc print data=&output_data. label; 
 
- %if n_byvar.>1 %then %do;
+ %if &n_byvar.>1 %then %do;
  var xx_variable xx_description xx_type xx_var_all xx_var1-xx_var&n_byvar.;
  %end;
- %else %if n_byvar.=1 %then %do;
+ %else %if &n_byvar.=1 %then %do;
  var xx_variable xx_description xx_type xx_var_all xx_var1;
  %end;
 
